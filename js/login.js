@@ -14,7 +14,7 @@ function LoginUser(event){
         return
     }
 
-    const foundUser = usuarios.find(u => user ===inputUser)
+    const foundUser = usuarios.find(u => u.user === inputUser)
 
     if(!foundUser){
         alert("El usuario no existe");

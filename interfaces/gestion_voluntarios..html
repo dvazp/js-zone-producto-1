@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/gestionVoluntariados.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav_links">
+            <a href="dashboard.html" class="nav_link">Dashboard</a>
+            <a href="gestion_usuarios.html" class="nav_link">Gestión de Usuarios</a>
+            <a href="gestion_voluntarios..html" class="nav_link">Gestión de Voluntarios</a>
+            <a href="login.html" class="nav_link">Login</a>
+        </div>
+    </div>
+    <div class="title_header">
+            <h2>Gestión de Voluntariados</h2>
+    </div>
+    <div class="main_container">
+        <div>
+            <form class="addVoluntariado_form" method="POST" id="addVoluntariado_form">
+                <div class="title_form">
+                    <h2>Alta de Voluntariado</h2>
+                </div>
+                <div>
+                    <label>Titulo</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div>
+                    <label>Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div>
+                    <label>Fecha</label>
+                    <input type="text" id="fecha" name="fecha" required>
+                </div>
+                <div>
+                    <label>Descripcion</label>
+                    <input type="text" id="descripcion" name="descripcion" required>
+                </div>
+                <div>
+                    <label>Tipo</label>
+                    <input type="text" id="tipo" name="tipo" required>
+                </div>
+                <div>
+                    <button id="addVoluntariado_button" class="addVoluntariado_button" type="submit">Añadir</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <form class="consultaVoluntariado_form" method="POST" id="consultaVoluntariado_form">
+                <div class="title_form">
+                    <h2>Consulta y Borrado</h2>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -29,8 +29,8 @@ function construirOfertas(){
 
         // Le añadimos el contenido
         titulo.innerHTML = voluntario.titulo;
-        usuario.innerHTML = `Publicado por: ${voluntario.usuario}`;
-        fecha.innerHTML =  `Fecha: ${voluntario.fecha}`;
+        usuario.innerHTML = `Publicado por : ${voluntario.usuario}`;
+        fecha.innerHTML =  `Fecha : ${voluntario.fecha}`;
         descripcion.innerHTML = voluntario.descripcion;
 
         titulo.classList.add("textoNormal");

@@ -6,7 +6,7 @@ let usuarios = [
     }
 ]
 
-let voluntariados = [
+export let voluntariados = [
     {
         titulo : "Se necesita una persona para cuidar de un gato",
         usuario : "Alejandra",
@@ -28,4 +28,5 @@ let voluntariados = [
         descripcion : "Se busca una persona para cuidar de un gato de 3 meses.",
         tipo : ""
     }
+    
 ]

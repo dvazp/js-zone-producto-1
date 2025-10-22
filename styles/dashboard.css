@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+ 
+    margin: 0px;
+}
+
+.navbar{
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: start;
+    width: 100%;
+}
+
+.nav_links{
+    margin-left: 4%;
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    font-size: large;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    
+}
+.nav_link{
+    color: black;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav_links a:hover{
+    text-decoration: underline;
+}
+
+.background-offers{
+    background-color: rgba(208, 208, 208, 1) ;
+}
+
+.background-volunters{
+
+    background-color: rgba(189, 189, 189, 1);
+}
+
+p{
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: bold; 
+  font-size: 16px;
+  font-weight: 700px;
+}
+
+.textoNormal{
+
+    color: rgba(255, 255, 255, 1);
+}
+
+.fecha{
+
+    color: rgba(43, 43, 43, 1);
+}

@@ -1,0 +1,43 @@
+import { voluntariados } from "./datos.js";
+
+// Tenemos los voluntarios
+console.log(voluntariados)
+
+function construirOfertas(){
+
+    const mainContainer = document.getElementById("maincontainer"); // Añadimos el contenedor Main
+    const contenedorOfertas = document.getElementById("ofertas"); // Cogemos el div con las ofertas
+
+    mainContainer.appendChild(contenedorOfertas);
+
+    voluntariados.forEach(voluntario => {
+        let divVoluntario = document.createElement("div");
+        contenedorOfertas.appendChild(divVoluntario);
+        divVoluntario.classList.add("card", "col-12", "mb-3", "col-lg-3", "rounded" ,"p-5", "bg-success", "d-flex","align-items-start");
+
+        // Creamos los datos de los voluntarios
+        let titulo = document.createElement("p");
+        let usuario = document.createElement("p");
+        let fecha = document.createElement("p");
+        let descripcion = document.createElement("p");
+
+        // Los añadimos al html
+        divVoluntario.appendChild(titulo);
+        divVoluntario.appendChild(fecha);
+        divVoluntario.appendChild(descripcion);
+        divVoluntario.appendChild(usuario);
+
+        // Le añadimos el contenido
+        titulo.innerHTML = voluntario.titulo;
+        usuario.innerHTML = `Publicado por: ${voluntario.usuario}`;
+        fecha.innerHTML =  `Fecha: ${voluntario.fecha}`;
+        descripcion.innerHTML = voluntario.descripcion;
+
+        titulo.classList.add("textoNormal");
+        fecha.classList.add("fecha");
+        descripcion.classList.add("textoNormal");
+        usuario.classList.add("textoNormal");
+    });
+}
+
+construirOfertas()

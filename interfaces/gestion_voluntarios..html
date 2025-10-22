@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../styles/gestionVoluntariados.css">
+    <script type="module" src="../js/gestionVoluntariados.js"></script>
 </head>
 
 <body>
@@ -36,15 +37,11 @@
                 </div>
                 <div>
                     <label>Fecha</label>
-                    <input type="text" id="fecha" name="fecha" required>
+                    <input type="date" id="fecha" name="fecha" required>
                 </div>
                 <div>
                     <label>Descripcion</label>
                     <input type="text" id="descripcion" name="descripcion" required>
-                </div>
-                <div>
-                    <label>Tipo</label>
-                    <input type="text" id="tipo" name="tipo" required>
                 </div>
                 <div>
                     <button id="addVoluntariado_button" class="addVoluntariado_button" type="submit">Añadir</button>
@@ -55,6 +52,9 @@
             <form class="consultaVoluntariado_form" method="POST" id="consultaVoluntariado_form">
                 <div class="title_form">
                     <h2>Consulta y Borrado</h2>
+                </div>
+                <div id="lista">
+                    <!-- Aquí se mostrarán los voluntariados -->
                 </div>
             </form>
         </div>

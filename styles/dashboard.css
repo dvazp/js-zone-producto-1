@@ -67,3 +67,17 @@ p{
 
     color: rgba(43, 43, 43, 1);
 }
+
+.efectoCard{
+    transition: transform 1.5s ease;
+}
+
+.efectoCard:hover{
+
+    transform: scale(1.1);
+
+}
+.peticion{
+    
+    background-color:rgba(87, 145, 199, 1) !important; 
+}

@@ -12,7 +12,7 @@ function construirOfertas(){
     voluntariados.forEach(voluntario => {
         let divVoluntario = document.createElement("div");
         contenedorOfertas.appendChild(divVoluntario);
-        divVoluntario.classList.add("card", "col-12", "mb-3", "col-lg-3", "rounded" ,"p-5", "bg-success", "d-flex","align-items-start");
+        divVoluntario.classList.add("card", "col-12", "mb-3", "col-lg-3", "rounded" ,"p-5", "bg-success", "d-flex","align-items-start","efectoCard");
 
         // Creamos los datos de los voluntarios
         let titulo = document.createElement("p");
@@ -36,6 +36,13 @@ function construirOfertas(){
         fecha.classList.add("fecha");
         descripcion.classList.add("textoNormal");
         usuario.classList.add("textoNormal");
+
+        // Revisamos el tipo para ver si es peticion o oferta
+        let tipo = voluntario.tipo;
+        if(tipo == "Peticion"){
+            divVoluntario.classList.add("peticion");
+            divVoluntario.classList.remove("bg-success") 
+        }
     });
 }
 construirOfertas()

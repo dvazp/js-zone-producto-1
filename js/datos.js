@@ -1,8 +1,10 @@
 let usuarios = [
     {
         user: "Mario",
-        password: "Mario"
-
+        password: "Mario",
+        nombre: "Mario",
+        email: "mario@mail.com",
+        tipo: "Voluntario"
     }
 ]
 
@@ -27,4 +29,4 @@ let voluntariados = [
     }
 ]
 
-export default voluntariados;
+export { usuarios, voluntariados };

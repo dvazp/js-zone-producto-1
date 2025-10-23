@@ -1,4 +1,4 @@
-import voluntariados from './datos.js';
+import { usuarios, voluntariados } from './datos.js';
 
 // Tenemos los voluntarios
 console.log(voluntariados)

@@ -5,7 +5,7 @@ function displayVoluntariados() {
     const listaDiv = document.getElementById("lista");
     listaDiv.innerHTML = '';
 
-    voluntariados.forEach(voluntariado => {
+    voluntariados.forEach((voluntariado, index) => {
         const voluntariadoDiv = document.createElement('div');
         voluntariadoDiv.classList.add('voluntariado-item');
         voluntariadoDiv.innerHTML = `
@@ -14,10 +14,21 @@ function displayVoluntariados() {
                 <p><strong>Usuario:</strong> ${voluntariado.usuario}</p>
                 <p><strong>Fecha:</strong> ${voluntariado.fecha}</p>
                 <p><strong>Descripción:</strong> ${voluntariado.descripcion}</p>
+                <p><strong>Tipo:</strong> ${voluntariado.tipo}</p>
+                <button class="delete-btn" data-index="${index}">Eliminar</button>
             </div>
         `;
         
         listaDiv.appendChild(voluntariadoDiv);
+    });
+
+    //Añadir funcionalidad a los botones de eliminar
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            voluntariados.splice(index, 1);
+            displayVoluntariados();
+        });
     });
 }
 
@@ -34,12 +45,13 @@ function addVoluntariado() {
     const usuario = getFieldValue('usuario', 'Usuario:');
     const fecha = getFieldValue('fecha', 'Fecha (ej. 16-10-2025):');
     const descripcion = getFieldValue('descripcion', 'Descripción:');
+    const tipo = getFieldValue('tipo', 'Tipo:');
 
-    const nuevo = { titulo, usuario, fecha, descripcion };
+    const nuevo = { titulo, usuario, fecha, descripcion, tipo };
 
     voluntariados.push(nuevo);
 
-    ['titulo','usuario','fecha','descripcion'].forEach(id => {
+    ['titulo','usuario','fecha','descripcion', 'tipo'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.value = '';
     });

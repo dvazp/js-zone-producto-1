@@ -1,4 +1,4 @@
-import voluntariados from './datos.js';
+import { usuarios, voluntariados } from './datos.js';
 
 //Funcion para mostrar los voluntariados en el div "lista"
 function displayVoluntariados() {

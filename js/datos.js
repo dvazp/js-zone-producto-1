@@ -29,8 +29,4 @@ let voluntariados = [
     }
 ]
 
-<<<<<<< HEAD
-export {usuarios,voluntariados};
-=======
 export { usuarios, voluntariados };
->>>>>>> 99931037907d1a8c337064318acb0710f03442af

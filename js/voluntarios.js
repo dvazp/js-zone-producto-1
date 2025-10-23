@@ -39,5 +39,4 @@ function construirOfertas(){
         usuario.classList.add("textoNormal");
     });
 }
-
 construirOfertas()

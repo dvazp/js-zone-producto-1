@@ -1,34 +1,85 @@
-// Tenemos los voluntarios
+import { usuarios, voluntariados } from './datos.js'
+
+// Comprobar usuarios
 console.log(usuarios)
 
 function listaUsuarios(){
 
     const consultaUser_form = document.getElementById("consultaUser_form");
+    consultaUser_form.innerHTML = '';
 
     usuarios.forEach(u => {
+        let contorno = document.createElement("div");
+        contorno.classList.add('user-card');
         let divUsuario = document.createElement("div");
-        divUsuario.classList.add("card", "col-12", "mb-3", "col-lg-3", "rounded" ,"p-5", "bg-success", "d-flex","align-items-start");
 
         let nombre = document.createElement("p");
         let email = document.createElement("p");
         let password = document.createElement("p");
-        let tipo = document.createElement("p");
+        let acciones = document.createElement("button");
 
         nombre.innerHTML = `Nombre: ${u.nombre}`;
         email.innerHTML = `Email: ${u.email}`;
         password.innerHTML = `Contraseña: ${u.password}`;
-        tipo.innerHTML = `Tipo: ${u.tipo}`;
+        acciones.innerHTML = `Borrar`;
+        acciones.setAttribute('id', u.email);
+        acciones.setAttribute('class', 'delButton')
 
         divUsuario.appendChild(nombre);
         divUsuario.appendChild(email);
         divUsuario.appendChild(password);
-        divUsuario.appendChild(tipo);
+        divUsuario.appendChild(acciones);
 
-        divUsuario.foreach(child => {
+        [nombre, email, password, acciones].forEach(child => {
             child.classList.add("textoNormal");
         });
-
+        contorno.appendChild(divUsuario);
+        consultaUser_form.appendChild(contorno);
     });
 }
 
-listaUsuarios();
+function getFieldValue(id, promptText) {
+    const el = document.getElementById(id);
+    if (el) return el.value.trim();
+    const v = window.prompt(promptText);
+    return v ? v.trim() : '';
+}
+
+function addUsuario() {
+    const nombre = getFieldValue('nombre');
+    const email = getFieldValue('email');
+    const password = getFieldValue('password');
+
+    const usuario = { nombre, email, password };
+
+    usuarios.push(usuario);
+
+    ['nombre','email','password'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+    });
+
+    listaUsuarios();
+}
+
+function removeUsuario(email) {
+    const index = usuarios.findIndex(usuario => usuario.email === email);
+    if (index > -1) {
+        usuarios.splice(index, 1);
+    }
+    listaUsuarios();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    listaUsuarios();
+
+    const addBtn = document.getElementById('addUser_button');
+    if (addBtn) addBtn.addEventListener('click', addUsuario);
+
+    const delBtns = document.getElementsByClassName('delButton');
+    for (const btn of delBtns) {
+        btn.addEventListener('click', (event) => {
+            removeUsuario(event.currentTarget.id);
+        });
+    }
+});

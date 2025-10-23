@@ -5,7 +5,7 @@ function displayVoluntariados() {
     const listaDiv = document.getElementById("lista");
     listaDiv.innerHTML = '';
 
-    voluntariados.forEach(voluntariado => {
+    voluntariados.forEach((voluntariado, index) => {
         const voluntariadoDiv = document.createElement('div');
         voluntariadoDiv.classList.add('voluntariado-item');
         voluntariadoDiv.innerHTML = `
@@ -15,10 +15,20 @@ function displayVoluntariados() {
                 <p><strong>Fecha:</strong> ${voluntariado.fecha}</p>
                 <p><strong>Descripción:</strong> ${voluntariado.descripcion}</p>
                 <p><strong>Tipo:</strong> ${voluntariado.tipo}</p>
+                <button class="delete-btn" data-index="${index}">Eliminar</button>
             </div>
         `;
         
         listaDiv.appendChild(voluntariadoDiv);
+    });
+
+    //Añadir funcionalidad a los botones de eliminar
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            voluntariados.splice(index, 1);
+            displayVoluntariados();
+        });
     });
 }
 

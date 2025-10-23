@@ -27,4 +27,4 @@ let voluntariados = [
     }
 ]
 
-export default voluntariados;
+export {usuarios,voluntariados};

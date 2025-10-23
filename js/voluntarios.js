@@ -1,7 +1,6 @@
-import voluntariados from './datos.js';
+import {voluntariados} from './datos.js';
 
 // Tenemos los voluntarios
-console.log(voluntariados)
 
 function construirOfertas(){
 

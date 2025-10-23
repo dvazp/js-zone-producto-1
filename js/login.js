@@ -1,6 +1,8 @@
+import {usuarios} from './datos.js';
 const formLogin = document.getElementById("login_form")
 const user = document.getElementById("user")
 const password = document.getElementById("password")
+const userHeader = document.getElementById("user_header");
 
 formLogin.addEventListener("submit", LoginUser)
 
@@ -22,7 +24,7 @@ function LoginUser(event){
         alert("La contraseña no coincide")
     } else{
         alert("Inicio de sesión correcto")
-        window.location.href = "../interfaces/dashboard.html"
+        userHeader.innerHTML = user.value;
     }
     
 } 

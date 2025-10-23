@@ -10,14 +10,31 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="nav_links">
-            <a href="dashboard.html" class="nav_link">Dashboard</a>
-            <a href="gestion_usuarios.html" class="nav_link">Gestión de Usuarios</a>
-            <a href="gestion_voluntarios..html" class="nav_link">Gestión de Voluntarios</a>
-            <a href="login.html" class="nav_link">Login</a>
-        </div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse nav_links" id="navbarNav">
+    <ul class="navbar-nav nav_links">
+      <li>
+        <a class="nav_link" href="dashboard.html">Dashboard</a>
+      </li>
+      <li>
+        <a class="nav_link" href="login.html">Login</a>
+      </li>
+      <li>
+        <a class="nav_link" href="gestion_usuarios.html">Gestión de Usuarios</a>
+      </li>
+      <li>
+        <a class="nav_link" href="gestion_voluntarios..html">Gestión de Voluntarios</a>
+      </li>
+      <li>
+        <a class="nav_link" href="#">No Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
     <div class="title_header">
             <h2 class="d-flex justify-content-center mt-5">Dashboard de Voluntariado de Mascotas</h2>
     </div>
@@ -29,5 +46,6 @@
         </div>
         <div id="ofertas" class="row justify-content-evenly w-100 mt-3 p-5">
     </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

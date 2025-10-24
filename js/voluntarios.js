@@ -12,7 +12,7 @@ function construirOfertas(){
     voluntariados.forEach(voluntario => {
         let divVoluntario = document.createElement("div");
         contenedorOfertas.appendChild(divVoluntario);
-        divVoluntario.classList.add("card", "col-12", "mb-3", "col-lg-3", "rounded" ,"p-5", "bg-success", "d-flex","align-items-start","efectoCard");
+        divVoluntario.classList.add("card", "col-12", "mb-3", "col-lg-3", "rounded" ,"p-5", "bg-success", "d-flex","align-items-start","efectoCard","mx-2","mx-3");
 
         // Creamos los datos de los voluntarios
         let titulo = document.createElement("p");

@@ -7,7 +7,7 @@ function listaUsuarios(){
 
     const consultaUser_form = document.getElementById("consultaUser_form");
     consultaUser_form.innerHTML = '';
-    console.log(usuarios);
+
     usuarios.forEach(u => {
         let contorno = document.createElement("div");
         contorno.classList.add('user-card');

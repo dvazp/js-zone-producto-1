@@ -61,3 +61,13 @@ body{
     color: #333;
     text-align: left;
 }
+
+
+/* Para arreglar el header de alta de usuarios */
+.card-header {
+    margin: 0 !important;
+}
+
+.card {
+    padding: 0 !important;
+}

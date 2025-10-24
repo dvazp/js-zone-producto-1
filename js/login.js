@@ -25,6 +25,7 @@ function LoginUser(event){
     } else{
         alert("Inicio de sesión correcto")
         userHeader.innerHTML = user.value;
+    
     }
     
 } 

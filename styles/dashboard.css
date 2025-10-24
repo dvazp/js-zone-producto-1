@@ -2,82 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
- 
+body {
     margin: 0px;
 }
-
-.navbar{
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: start;
-    width: 100%;
-}
-
-.nav_links{
-    margin-left: 4%;
-    display: flex;
-    gap: 20px;
-    margin-top: 40px;
-    font-size: large;
+.navbar .nav-link {
     color: black;
-    text-decoration: none;
-    margin-bottom: 20px;
-}
-
-li > a{
-
-    color: black;
-}
-.nav_link{
-    color: black;
-    text-decoration: none;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: bold;
+    font-weight: 600;
+    text-decoration: none;
 }
-
-.nav_links a:hover{
+.navbar .nav-link:hover {
     text-decoration: underline;
+    opacity: 60%;
 }
+li>a {
 
-.background-offers{
-    background-color: rgba(208, 208, 208, 1) ;
+    color: black;
 }
-
-.background-volunters{
-
+.background-offers {
+    background-color: rgba(208, 208, 208, 1);
+}
+.background-volunters {
     background-color: rgba(189, 189, 189, 1);
 }
-
-p{
+p {
     font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: bold; 
-  font-size: 16px;
-  font-weight: 700px;
+    font-optical-sizing: auto;
+    font-style: bold;
+    font-size: 16px;
+    font-weight: 700px;
 }
-
-.textoNormal{
-
+.textoNormal {
     color: rgba(255, 255, 255, 1);
 }
-
-.fecha{
-
+.fecha {
     color: rgba(43, 43, 43, 1);
 }
-
-.efectoCard{
+.efectoCard {
     transition: transform 1.5s ease;
 }
-
-.efectoCard:hover{
-
+.efectoCard:hover {
     transform: scale(1.1);
-
 }
-.peticion{
-    
-    background-color:rgba(87, 145, 199, 1) !important; 
+.peticion {
+    background-color: rgba(87, 145, 199, 1) !important;
 }

@@ -13,38 +13,28 @@
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse nav_links" id="navbarNav">
-      <ul class="navbar-nav nav_links">
-        <li>
-          <a class="nav_link" href="dashboard.html">Dashboard</a>
-        </li>
-        <li>
-          <a class="nav_link" href="login.html">Login</a>
-        </li>
-        <li>
-          <a class="nav_link" href="gestion_usuarios.html">Gestión de Usuarios</a>
-        </li>
-        <li>
-          <a class="nav_link" href="gestion_voluntarios..html">Gestión de Voluntarios</a>
-        </li>
-        <li>
-          <a class="nav_link" href="#">No Login</a>
-        </li>
-      </ul>
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav gap-3 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="gestion_usuarios.html">Gestión de Usuarios</a></li>
+          <li class="nav-item"><a class="nav-link" href="gestion_voluntarios..html">Gestión de Voluntarios</a></li>
+          <li class="nav-item ms-lg-auto"><a class="nav-link" id="user_header" href="#">No Login</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-
   <div class="title_header">
     <h2 class="d-flex justify-content-center mt-5">Dashboard de Voluntariado de Mascotas</h2>
   </div>
 
   <!-- Contenedor Principal -->
-  <div id="maincontainer"
-    class="d-flex flex-column justify-content-center align-items-center mt-5 background-volunters rounded container-lg ">
+  <div id="maincontainer"class="d-flex flex-column justify-content-center align-items-center mt-5 background-volunters rounded container-lg ">
     <div class="d-flex justify-content-center background-offers w-25 rounded mt-5">
       <h2 class="mt-2">Ofertas</h2>
     </div>
@@ -52,5 +42,4 @@
     </div>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

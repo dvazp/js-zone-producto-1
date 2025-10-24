@@ -9,56 +9,51 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse nav_links" id="navbarNav">
-            <ul class="navbar-nav nav_links">
-            <li>
-                <a class="nav_link" href="dashboard.html">Dashboard</a>
-            </li>
-            <li>
-                <a class="nav_link" href="login.html">Login</a>
-            </li>
-            <li>
-                <a class="nav_link" href="gestion_usuarios.html">Gestión de Usuarios</a>
-            </li>
-            <li>
-                <a class="nav_link" href="gestion_voluntarios..html">Gestión de Voluntarios</a>
-            </li>
-            <li>
-                <a class="nav_link" href="#">No Login</a>
-            </li>
-            </ul>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav gap-3 mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestion_usuarios.html">Gestión de Usuarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestion_voluntarios..html">Gestión de Voluntarios</a></li>
+                    <li class="nav-item ms-lg-auto">
+                        <a class="nav-link" id="user_header" href="#">No Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="title_header">
-            <h2>Gestión de Usuarios</h2>
+            <h2 class="d-flex justify-content-center mt-5">Gestión de Usuarios</h2>
     </div>
-    <div class="main_container">
-        <div>
-            <form class="addUser_form" method="POST" id="addUser_form">
-                <div class="title_form">
+    <div class="container my-5 main_container">
+        <div class="card shadow-sm bg-light">
+                <div class="card-header bg-success text-white text-center">
                     <h2>Alta de Usuarios</h2>
                 </div>
+            <form class="addUser_form" method="POST" id="addUser_form">
                 <div>
                     <label class="labelClass">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required="">
+                    <input type="text" id="nombre" name="nombre" required>
                 </div>
                 <div>
                     <label class="labelClass">Email</label>
-                    <input type="text" id="email" name="email" required="">
+                    <input type="text" id="email" name="email" required>
                 </div>
                 <div>
                     <label class="labelClass">Password</label>
-                    <input type="text" id="password" name="password" required="">
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div>
-                    <button id="addUser_button" class="addUser_button" type="submit">Añadir</button>
+                    <button id="addUser_button" class="btn btn-success px-4" type="submit">Añadir</button>
                 </div>
             </form>
         </div>
-        <div>
+        <div class="card shadow-sm bg-light mx-auto">
             <form class="consultaUser_form" method="POST" id="consultaUser_form">
                 <div class="title_form">
                     <h2>Consulta y Borrado</h2>

@@ -7,7 +7,7 @@ function listaUsuarios(){
 
     const consultaUser_form = document.getElementById("consultaUser_form");
     consultaUser_form.innerHTML = '';
-
+    console.log(usuarios);
     usuarios.forEach(u => {
         let contorno = document.createElement("div");
         contorno.classList.add('user-card');
@@ -23,7 +23,8 @@ function listaUsuarios(){
         password.innerHTML = `Contraseña: ${u.password}`;
         acciones.innerHTML = `Borrar`;
         acciones.setAttribute('id', u.email);
-        acciones.setAttribute('class', 'delButton')
+        acciones.setAttribute('class', 'delButton btn btn-success px-4')
+        acciones.setAttribute('type', 'button');
 
         divUsuario.appendChild(nombre);
         divUsuario.appendChild(email);
@@ -33,9 +34,17 @@ function listaUsuarios(){
         [nombre, email, password, acciones].forEach(child => {
             child.classList.add("textoNormal");
         });
+
         contorno.appendChild(divUsuario);
         consultaUser_form.appendChild(contorno);
     });
+
+    const delBtns = document.getElementsByClassName('delButton');
+    for (const btn of delBtns) {
+        btn.addEventListener('click', function() {
+            removeUsuario(this.id); 
+        });
+    }
 }
 
 function getFieldValue(id, promptText) {
@@ -50,6 +59,11 @@ function addUsuario() {
     const email = getFieldValue('email');
     const password = getFieldValue('password');
 
+    if (nombre == "" || email == "" || password == "" ) {
+        window.alert("No puede haber ningún campo en blanco.");
+        return;
+    }
+
     const usuario = { nombre, email, password };
 
     usuarios.push(usuario);
@@ -63,6 +77,7 @@ function addUsuario() {
 }
 
 function removeUsuario(email) {
+    console.log(email);
     const index = usuarios.findIndex(usuario => usuario.email === email);
     if (index > -1) {
         usuarios.splice(index, 1);
@@ -75,11 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addBtn = document.getElementById('addUser_button');
     if (addBtn) addBtn.addEventListener('click', addUsuario);
-
-    const delBtns = document.getElementsByClassName('delButton');
-    for (const btn of delBtns) {
-        btn.addEventListener('click', (event) => {
-            removeUsuario(event.currentTarget.id);
-        });
-    }
 });

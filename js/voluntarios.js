@@ -4,10 +4,7 @@ import {voluntariados} from './datos.js';
 
 function construirOfertas(){
 
-    const mainContainer = document.getElementById("maincontainer"); // Añadimos el contenedor Main
     const contenedorOfertas = document.getElementById("ofertas"); // Cogemos el div con las ofertas
-
-    mainContainer.appendChild(contenedorOfertas);
 
     voluntariados.forEach(voluntario => {
         let divVoluntario = document.createElement("div");
